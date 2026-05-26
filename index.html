@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUNNY HUGS | Premium Diaper Ecosystem</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            cream: '#FFFDD0',
+                            warmWhite: '#FAFAFA',
+                            babyBlue: '#E0F2FE',
+                            accentBlue: '#0284C7',
+                            darkText: '#1E293B',
+                            peach: '#FFEDD5',
+                            lavender: '#F3E8FF',
+                        }
+                    },
+                    borderRadius: { 'premium': '24px', 'super': '32px' }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .custom-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 10px; }
+        @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
+        .animate-marquee { display: flex; width: 200%; animation: marquee 30s linear infinite; }
+    </style>
+</head>
+<body class="bg-brand-warmWhite text-brand-darkText font-sans selection:bg-brand-babyBlue antialiased overflow-x-hidden">
+
+    <div class="bg-gradient-to-r from-brand-accentBlue to-sky-700 text-white text-xs text-center py-2.5 px-4 font-semibold flex items-center justify-center gap-2">
+        <span>✨ Free international shipping on orders over $50.00! Up to 24-Hour Dryness Guarantee.</span>
+    </div>
+
+    <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-gray-100 px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <span class="text-xl font-black tracking-tight">BUNNY <span class="text-brand-accentBlue font-bold text-lg">HUGS</span></span>
+            <span class="text-[9px] text-amber-600 font-bold border border-amber-300 bg-amber-50 px-1.5 py-0.5 rounded tracking-wider uppercase">Diapers</span>
+        </div>
+        
+        <div class="hidden lg:flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-gray-600">
+            <a href="#overview" class="hover:text-brand-accentBlue transition-colors">Overview</a>
+            <a href="#catalog" class="hover:text-brand-accentBlue transition-colors">Products</a>
+            <a href="#faq" class="hover:text-brand-accentBlue transition-colors">FAQ Support</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+            <button id="cartToggle" class="relative flex items-center gap-2 bg-brand-babyBlue/60 px-4 py-2 rounded-full text-brand-darkText hover:bg-brand-babyBlue transition-all">
+                <i data-lucide="shopping-bag" class="w-4 h-4 text-brand-accentBlue"></i>
+                <span class="text-xs font-black hidden sm:inline">MY BASKET</span>
+                <span id="globalCartCount" class="bg-brand-accentBlue text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-black">0</span>
+            </button>
+            <button onclick="toggleMenu()" class="lg:hidden p-2 text-gray-700"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </div>
+    </nav>
+
+    <div id="mobileMenu" class="hidden fixed inset-x-0 top-[65px] bg-white border-b border-gray-200 p-6 flex flex-col gap-4 z-30 shadow-xl">
+        <a href="#overview" class="text-sm font-bold uppercase py-2 border-b" onclick="toggleMenu()">Overview</a>
+        <a href="#catalog" class="text-sm font-bold uppercase py-2 border-b" onclick="toggleMenu()">Products</a>
+        <a href="#faq" class="text-sm font-bold uppercase py-2" onclick="toggleMenu()">FAQ Support</a>
+    </div>
+
+    <section id="overview" class="relative min-h-[75vh] flex items-center justify-center text-center px-6 bg-gradient-to-b from-brand-babyBlue via-brand-warmWhite to-white overflow-hidden">
+        <div class="max-w-4xl z-10 py-12">
+            <span class="inline-flex items-center gap-1.5 bg-white border border-brand-accentBlue/20 text-brand-accentBlue text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest mb-6 shadow-sm">
+                <i data-lucide="award" class="w-3.5 h-3.5 text-amber-500"></i> PREMIUM COMFORT CORE SYSTEMS
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-brand-darkText mb-6 leading-none">
+                BUNNY HUGS Dream Diapers<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accentBlue to-sky-600 font-medium text-3xl sm:text-5xl block mt-2">Super Dry Soft Care Ecosystem</span>
+            </h1>
+            <p class="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto mb-10 leading-relaxed">
+                Engineered with high-performing structural soft fibers and a super-ventilated breathable backing sheet layer. Safely safeguards active babies from skin rashes and liquid overflow.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto text-left mt-8">
+                <div class="bg-white/80 p-4 rounded-xl border border-sky-100 shadow-sm">
+                    <h4 class="font-bold text-xs text-brand-accentBlue uppercase mb-1">Our Mission</h4>
+                    <p class="text-[11px] text-gray-500">Premium care without financial strain via up to 24-hour dryness and high-performance skin protection layouts.</p>
+                </div>
+                <div class="bg-white/80 p-4 rounded-xl border border-sky-100 shadow-sm">
+                    <h4 class="font-bold text-xs text-brand-accentBlue uppercase mb-1">Our Vision</h4>
+                    <p class="text-[11px] text-gray-500">To become a trusted global baby care network through continuous material and design innovations.</p>
+                </div>
+                <div class="bg-white/80 p-4 rounded-xl border border-sky-100 shadow-sm">
+                    <h4 class="font-bold text-xs text-brand-accentBlue uppercase mb-1">Core Values</h4>
+                    <p class="text-[11px] text-gray-500">Uncompromising safety, climate-fit architecture, accessible premiums, and family-oriented support lines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalog" class="py-16 px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl sm:text-3xl font-black text-brand-darkText tracking-tight">Essential Product Catalog</h2>
+            <p class="text-gray-500 text-xs sm:text-sm mt-1">Select from our refined structural configurations optimized for premium protection loops.</p>
+            
+            <div class="mt-6 flex flex-wrap justify-center gap-3">
+                <input type="text" id="catalogSearch" oninput="filterCatalog()" placeholder="Search size index..." class="px-5 py-2 text-xs font-semibold rounded-full bg-white border focus:outline-none focus:border-brand-accentBlue w-64 shadow-sm">
+                <div class="flex gap-2">
+                    <button onclick="filterType('all')" class="size-btn px-4 py-2 rounded-full text-xs font-bold bg-brand-darkText text-white shadow-sm">All Sizing</button>
+                    <button onclick="filterType('Small')" class="size-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-gray-600 border">Small</button>
+                    <button onclick="filterType('Medium')" class="size-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-gray-600 border">Medium</button>
+                    <button onclick="filterType('Large')" class="size-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-gray-600 border">Large</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="catalogGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            </div>
+    </section>
+
+    <section class="py-16 bg-white border-y border-gray-100 px-6">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-[10px] font-bold text-brand-accentBlue tracking-widest uppercase">Targeted Persona Integration</span>
+                <h2 class="text-2xl font-black text-brand-darkText mt-1 mb-4">Empathetic Communication Architecture</h2>
+                <p class="text-gray-600 text-xs leading-relaxed mb-4">
+                    Our communication matrix directly validates the core pain points of protective and proactive parenting. We provide genuine, emotional reassurance focused directly on touch, structural security, and consistent protection.
+                </p>
+                <div class="space-y-3">
+                    <div class="p-4 bg-brand-warmWhite rounded-xl border border-gray-100 flex items-start gap-3">
+                        <div class="p-1.5 bg-sky-100 rounded text-brand-accentBlue mt-0.5"><i data-lucide="shield-check" class="w-4 h-4"></i></div>
+                        <div>
+                            <h4 class="font-bold text-xs text-brand-darkText">The Real-World Conflict</h4>
+                            <p class="text-[11px] text-gray-500">Parents are tired of budget diaper models tearing, sagging, or creating painful heat rashes.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-brand-warmWhite rounded-xl border border-gray-100 flex items-start gap-3">
+                        <div class="p-1.5 bg-emerald-100 rounded text-emerald-600 mt-0.5"><i data-lucide="smile" class="w-4 h-4"></i></div>
+                        <div>
+                            <h4 class="font-bold text-xs text-brand-darkText">The Emotional Transformation</h4>
+                            <p class="text-[11px] text-gray-500">By shifting to an advanced absorption core framework, your household secures a restful, undisturbed night's sleep layout.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-brand-darkText to-slate-800 p-8 rounded-super text-white">
+                <h3 class="font-black text-sm uppercase text-amber-400 tracking-wider mb-4">Core Structural Brand Alignment</h3>
+                <div class="divide-y divide-slate-700 text-xs">
+                    <div class="py-3 flex justify-between"><span>Up to 24-Hour Dryness Assurance</span><span class="text-slate-400 font-bold">Standard Value</span></div>
+                    <div class="py-3 flex justify-between"><span>Advanced 3D Leak Guard Technology</span><span class="text-slate-400 font-bold">Standard Value</span></div>
+                    <div class="py-3 flex justify-between"><span>Zero-Friction Cotton-Soft Materials</span><span class="text-slate-400 font-bold">Standard Value</span></div>
+                    <div class="py-3 flex justify-between"><span>Anatomical Flexible Elastic Fit</span><span class="text-slate-400 font-bold">Standard Value</span></div>
+                </div>
+                <div class="mt-6 p-4 bg-slate-900/50 rounded-xl text-[11px] italic text-slate-300 border-l-2 border-amber-400">
+                    "We position BunnyHugs not simply as an automated product line, but as a dependable partner watching over your baby's skin safety."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-amber-400 py-4 text-slate-950 font-black text-xs uppercase tracking-wider overflow-hidden">
+        <div class="animate-marquee gap-8 whitespace-nowrap">
+            <span>🌟 "No more leakage over-hydration issues" — Chidinma O.</span>
+            <span>🌟 "The flat rate pricing structure rules" — Fatima A.</span>
+            <span>🌟 "Perfect protection for warm tropical afternoons" — Blessing E.</span>
+            <span>🌟 "No more leakage over-hydration issues" — Chidinma O.</span>
+        </div>
+    </div>
+
+    <section id="faq" class="py-16 px-6 max-w-3xl mx-auto">
+        <div class="text-center mb-10">
+            <h2 class="text-2xl font-black text-brand-darkText tracking-tight">Frequently Asked Queries</h2>
+            <p class="text-gray-500 text-xs mt-1">Quick operational guides addressing sizing distributions and ordering parameters.</p>
+        </div>
+        <div class="space-y-4">
+            <div class="bg-white rounded-xl border overflow-hidden shadow-sm">
+                <button onclick="toggleFaq(this)" class="w-full text-left p-4 font-bold text-xs text-brand-darkText flex justify-between items-center focus:outline-none">
+                    <span>What makes BunnyHugs unique for delicate skin types?</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 transition-transform"></i>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 px-4 text-gray-500 text-[11px] leading-relaxed">
+                    <p class="pb-4">We integrate micro-porous venting layers designed explicitly to cope with warm environments, shifting dampness instantly into an isolated inner absorbent shell to prevent diaper rash.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl border overflow-hidden shadow-sm">
+                <button onclick="toggleFaq(this)" class="w-full text-left p-4 font-bold text-xs text-brand-darkText flex justify-between items-center focus:outline-none">
+                    <span>Why do all BunnyHugs diaper packs share an identical configuration price?</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 transition-transform"></i>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 px-4 text-gray-500 text-[11px] leading-relaxed">
+                    <p class="pb-4">To make budgeting predictable for families. Instead of raising costs for larger sizes, we adjust the quantity of diapers per pack to match the materials needed for each stage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-slate-500 text-xs pt-12 pb-6 border-t border-slate-900 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-slate-900">
+            <div>
+                <h4 class="text-white font-black text-sm mb-3">BUNNY HUGS SYSTEMS</h4>
+                <p class="text-[11px] text-slate-400 leading-relaxed">Providing high-performance, accessible, and reliable diapering solutions tailored for the ultimate development and comfort of children.</p>
+            </div>
+            <div>
+                <h5 class="text-white font-bold mb-3 uppercase tracking-wider text-[10px]">E-Commerce Architecture</h5>
+                <ul class="space-y-2 text-[11px]">
+                    <li>Maryland USA Manufacturing Core Location</li>
+                    <li>Global Distribution Outlet Pipeline Network</li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-bold mb-3 uppercase tracking-wider text-[10px]">Customer Support Contact</h5>
+                <p class="text-[11px] text-slate-400 leading-relaxed">
+                    Email: support@bunnyhugsdiaper.com<br>
+                    Live communication logs active 24/7.
+                </p>
+                <div class="flex items-center gap-4 mt-4 text-slate-400">
+                    <a href="https://instagram.com" target="_blank" class="hover:text-pink-500 transition-colors p-1.5 bg-slate-900 rounded-full"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                    <a href="https://facebook.com" target="_blank" class="hover:text-blue-500 transition-colors p-1.5 bg-slate-900 rounded-full"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                    <a href="https://wa.me/message" target="_blank" class="hover:text-emerald-500 transition-colors p-1.5 bg-slate-900 rounded-full"><i data-lucide="message-square" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="text-center pt-6 text-[10px] text-slate-700">&copy; 2026 BUNNY HUGS DIAPER CORPORATION. All Rights Reserved. Complete Modernized Brand Ecosystem.</p>
+    </footer>
+
+    <div id="cartDrawer" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="cartSidebar" class="absolute right-0 top-0 h-full w-full sm:w-[400px] bg-white shadow-2xl flex flex-col translate-x-full transition-transform duration-300 ease-out">
+            <div class="p-4 border-b flex items-center justify-between">
+                <h3 class="text-xs font-black flex items-center gap-2 text-brand-darkText"><i data-lucide="shopping-cart" class="text-brand-accentBlue"></i> YOUR SELECTION</h3>
+                <button id="cartClose" class="p-1 hover:bg-gray-100 rounded-full"><i data-lucide="x" class="w-4 h-4"></i></button>
+            </div>
+            <div id="cartItemsList" class="flex-1 overflow-y-auto p-4 space-y-3 custom-scroll">
+                </div>
+            <div class="p-4 border-t bg-gray-50">
+                <div class="flex justify-between items-center text-xs font-black text-brand-darkText mb-3">
+                    <span>Total Amount:</span><span id="cartTotalText">$0.00</span>
+                </div>
+                <button onclick="alert('Routing details to international processing funnel...')" class="w-full bg-brand-accentBlue text-white font-bold text-xs py-3 rounded-full uppercase tracking-wider">Complete Order</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // 3-Size Matrix configured directly with USD values ($14.99 baseline tier)
+        const PRODUCT_MATRIX = [
+            { id: 's48', name: 'BunnyHugs Dream Diapers', size: 'Size Small', details: 'Small Pack (4-8 kg) | 48 Count', price: 14.99, color: 'from-cyan-400 to-sky-500' },
+            { id: 'm42', name: 'BunnyHugs Dream Diapers', size: 'Size Medium', details: 'Medium Pack (6-11 kg) | 42 Count', price: 14.99, color: 'from-purple-400 to-indigo-500' },
+            { id: 'l40', name: 'BunnyHugs Dream Diapers', size: 'Size Large', details: 'Large Pack (9-14 kg) | 40 Count', price: 14.99, color: 'from-rose-400 to-orange-500', isTopSeller: true }
+        ];
+
+        let cartState = [];
+        let globalFilter = 'all';
+
+        function buildCatalog() {
+            const grid = document.getElementById('catalogGrid');
+            const searchVal = document.getElementById('catalogSearch').value.toLowerCase();
+            
+            const matches = PRODUCT_MATRIX.filter(item => {
+                const textCheck = item.size.toLowerCase().includes(searchVal) || item.details.toLowerCase().includes(searchVal);
+                const filterCheck = globalFilter === 'all' || item.size.includes(globalFilter);
+                return textCheck && filterCheck;
+            });
+
+            if(matches.length === 0) {
+                grid.innerHTML = `<p class="col-span-full py-8 text-center text-xs font-bold text-gray-400">No matching sizes located.</p>`;
+                return;
+            }
+
+            grid.innerHTML = matches.map(prod => `
+                <div class="bg-white border rounded-premium p-4 shadow-sm flex flex-col justify-between transform transition-all hover:-translate-y-1 relative">
+                    ${prod.isTopSeller ? `<span class="absolute top-6 left-6 z-10 bg-emerald-500 text-white text-[9px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider">TOP SELLER</span>` : ''}
+                    <div>
+                        <div class="h-36 rounded-xl bg-gradient-to-br ${prod.color} p-4 flex flex-col justify-end text-white">
+                            <h4 class="font-black text-xs uppercase tracking-tight">${prod.name}</h4>
+                            <p class="text-[11px] opacity-90 font-bold">${prod.size}</p>
+                        </div>
+                        <p class="text-gray-400 text-[11px] font-bold mt-3">${prod.details}</p>
+                        <ul class="text-[10px] text-brand-accentBlue font-bold space-y-1 mt-2">
+                            <li class="flex items-center gap-1"><i data-lucide="check" class="w-3 h-3"></i> High Absorbency Leak Guard</li>
+                            <li class="flex items-center gap-1"><i data-lucide="check" class="w-3 h-3"></i> Soft Breathable Flexibility</li>
+                        </ul>
+                    </div>
+                    <div class="mt-4 pt-3 border-t flex justify-between items-center">
+                        <span class="text-sm font-black text-brand-darkText">$${prod.price.toFixed(2)}</span>
+                        <button onclick="addToCart('${prod.id}')" class="bg-brand-accentBlue text-white text-[10px] font-black uppercase px-3 py-2 rounded-full tracking-wider hover:bg-sky-700 transition-colors">Add To Cart</button>
+                    </div>
+                </div>
+            `).join('');
+            lucide.createIcons();
+        }
+
+        function addToCart(id) {
+            const match = PRODUCT_MATRIX.find(p => p.id === id);
+            const nested = cartState.find(item => item.id === id);
+            if(nested) { nested.quantity += 1; } else { cartState.push({ ...match, quantity: 1 }); }
+            renderCartUI();
+            toggleCartDrawer(true);
+        }
+
+        function removeCartItem(id) {
+            cartState = cartState.filter(item => item.id !== id);
+            renderCartUI();
+        }
+
+        function renderCartUI() {
+            const container = document.getElementById('cartItemsList');
+            const totalCount = cartState.reduce((sum, item) => sum + item.quantity, 0);
+            const totalCost = cartState.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            document.getElementById('globalCartCount').innerText = totalCount;
+            document.getElementById('cartTotalText').innerText = `$${totalCost.toFixed(2)}`;
+
+            if(cartState.length === 0) {
+                container.innerHTML = `<div class="text-center py-12 text-xs font-bold text-gray-400">Your basket allocation is empty.</div>`;
+            } else {
+                container.innerHTML = cartState.map(item => `
+                    <div class="flex items-center justify-between bg-gray-50 p-3 rounded-xl border">
+                        <div>
+                            <h5 class="text-xs font-black text-brand-darkText">${item.size}</h5>
+                            <p class="text-[10px] font-semibold text-gray-400">$${item.price.toFixed(2)} &times; ${item.quantity}</p>
+                        </div>
+                        <button onclick="removeCartItem('${item.id}')" class="text-red-500 hover:bg-red-50 p-1 rounded-full"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+                    </div>
+                `).join('');
+            }
+            lucide.createIcons();
+        }
+
+        function toggleCartDrawer(forceOpen = null) {
+            const drawer = document.getElementById('cartDrawer');
+            const sidebar = document.getElementById('cartSidebar');
+            const isOpen = forceOpen !== null ? !forceOpen : !drawer.classList.contains('opacity-0');
+
+            if (isOpen) {
+                drawer.classList.add('opacity-0', 'pointer-events-none');
+                sidebar.classList.add('translate-x-full');
+            } else {
+                drawer.classList.remove('opacity-0', 'pointer-events-none');
+                sidebar.classList.remove('translate-x-full');
+            }
+        }
+
+        function filterType(type) {
+            globalFilter = type;
+            document.querySelectorAll('.size-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-darkText', 'text-white', 'shadow-sm');
+                btn.classList.add('bg-white', 'text-gray-600');
+            });
+            event.target.classList.add('bg-brand-darkText', 'text-white', 'shadow-sm');
+            buildCatalog();
+        }
+
+        function filterCatalog() { buildCatalog(); }
+        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
+        function toggleFaq(btn) {
+            const panel = btn.nextElementSibling;
+            panel.style.maxHeight = (panel.style.maxHeight && panel.style.maxHeight !== '0px') ? '0px' : panel.scrollHeight + 'px';
+        }
+
+        document.getElementById('cartToggle').addEventListener('click', () => toggleCartDrawer());
+        document.getElementById('cartClose').addEventListener('click', () => toggleCartDrawer(false));
+
+        buildCatalog();
+        renderCartUI();
+    </script>
+</body>
+</html>
